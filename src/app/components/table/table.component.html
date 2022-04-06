@@ -1,0 +1,13 @@
+<table matSort (matSortChange)="sortData($event)">
+  <tr>
+    <th mat-sort-header="address">Адрес назначения</th>
+    <th mat-sort-header="gateway">Шлюз</th>
+    <th mat-sort-header="interface">Интерфейс</th>
+  </tr>
+
+  <tr *ngFor="let routes of sortedData">
+    <td>{{ routes.address }}/{{ routes.mask }}</td>
+    <td>{{ routes.gateway }}</td>
+    <td>{{ routes.interface }}</td>
+  </tr>
+</table>

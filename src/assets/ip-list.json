@@ -1,0 +1,67 @@
+{
+	"routes": [
+  {
+    "uuid": "624c324160dc2eecd7e3800f",
+    "address": "10.1.30.0",
+    "mask": "24",
+    "gateway": "0.0.0.0",
+    "interface": "Гостевая сеть"
+  },
+  {
+    "uuid": "624c324108a8ab384fffa5d6",
+    "address": "192.168.1.0",
+    "mask": "8",
+    "gateway": "0.0.0.0",
+    "interface": "Домашняя сеть"
+  },
+  {
+    "uuid": "624c32411f1279777128b8ac",
+    "address": "10.1.32.0",
+    "mask": "24",
+    "gateway": "0.0.0.0",
+    "interface": "Гостевая сеть"
+  },
+  {
+    "uuid": "624c32412a45b3d318aba10d",
+    "address": "69.169.1.233",
+    "mask": "8",
+    "gateway": "69.168.112.233",
+    "interface": "Подключение Ethernet"
+  },
+  {
+    "uuid": "624c32413714784d97f9532d",
+    "address": "196.0.174.0",
+    "mask": "24",
+    "gateway": "196.0.175.10",
+    "interface": "Подключение Ethernet"
+  },
+  {
+    "uuid": "624c3241e0371598f399992c",
+    "address": "192.168.1.25",
+    "mask": "24",
+    "gateway": "0.0.0.0",
+    "interface": "Домашняя сеть"
+  },
+  {
+    "uuid": "624c3241e52d6559d3985d64",
+    "address": "130.22.20.93",
+    "mask": "32",
+    "gateway": "130.12.226.195",
+    "interface": "Гостевая сеть"
+  },
+  {
+    "uuid": "624c324125f0cb8502008031",
+    "address": "57.136.130.65",
+    "mask": "16",
+    "gateway": "57.136.90.63",
+    "interface": "Подключение Ethernet"
+  },
+  {
+    "uuid": "624c3241cd2305187fd77321",
+    "address": "85.0.59.5",
+    "mask": "24",
+    "gateway": "82.0.176.155",
+    "interface": "Подключение Ethernet"
+  }
+]
+}
