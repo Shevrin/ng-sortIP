@@ -123,20 +123,93 @@ function compare(a: number | string, b: number | string, isAsc: boolean) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
 
-// const arrIP = ['193.168.112.10', '194.161.220.0', '63.112.2.110', '93.8.223.116', '103.118.212.150', '196.118.12.210']
+/**
 
-// console.log(arrIP.sort());
+const arrIP =
+	[
+		'193.168.112.10',
+		'194.161.220.0',
+		'63.112.2.110',
+		'93.8.223.116',
+		'103.118.212.150',
+		'196.118.12.210',
+		'196.0.0.1',
+		'96.118.12.210'
+	]
 
-// const splitIP = arrIP.map((item, idx) => {
-// 	console.log(`item ${idx}__:`, item);
-// 	console.log('первый октет', +item.split('.')[0]);
-// 	return item.split('.').map((i) => {
-// 		console.log(`октет item_${idx}__`, +i)
-// 		return +i
-// 	})
-// })
-// console.log(splitIP);
+console.log(arrIP);
 
+
+const modifyIpToNumber = (arrayIP) => {
+
+	return arrayIP.map((item, idx) => {
+		return +item.split('.').map((i) => {
+			// console.log(`октет item_${idx}__`, i)
+			while (i.length < 3) {
+				i = '0' + i
+				// console.log(i);
+			}
+			return i
+		}).join('')
+
+	});
+}
+
+console.log(modifyIpToNumber(arrIP));
+
+const modifyNumberToIp = (arrayNum) => {
+	return arrayNum.map((item) => {
+		let newItem = item.toString()
+		if (newItem.length < 12)
+			while (newItem.length < 12) {
+				newItem = '0' + newItem
+			}
+		// console.log(newItem)
+		let modifyIP = []
+		for (let i = 0; i <= 9; i = i + 3) {
+			let octette = newItem
+			// console.log(`octette ${i}:`, +octette.substr(i, 3));
+			modifyIP.push(+octette.substr(i, 3))
+			// console.log(modifyIP)
+		}
+		// let modifyIP = ''
+		// for (let i = 0; i <= 9; i = i + 3) {
+		// 	let octette = newItem
+		// 	console.log(`octette ${i}:`, +octette.substr(i, 3));
+		// 	if (i < 9) {
+		// 		modifyIP += +octette.substr(i, 3) + '.'
+		// 	}
+		// 	if (i >= 9) {
+		// 		modifyIP += +octette.substr(i, 3)
+		// 	}
+		// 	console.log(modifyIP)
+		// }
+		return modifyIP.join('.')
+	})
+}
+
+console.log(modifyNumberToIp(modifyIpToNumber(arrIP)));
 // splitIP.map((item) => {
 // 	item[0]
 // })
+
+// function compare(a, b, isAsc = true) {
+// 	return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+// }
+
+// const sortedData = arrIP.sort((a, b) => {
+// 	return compare(a.address, b.address);
+// });
+
+// console.log('sortedData:', sortedData);
+
+
+
+
+// Побитовое
+
+// IP-адрес имеет длину 4 байта и обычно записывается в виде четырех чисел, представляющих значения каждого байта в десятичной форме и разделенных точками, например, 128.10.2.30 - традиционная десятичная форма представления адреса, а 10000000 00001010 00000010 00011110 - двоичная форма представления этого же адреса.
+
+
+
+ */
